@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire Démarre ta Story</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>   
+    <fieldset>
+        <form action="traitement.php" method="post" id="mainForm">
+            <section class="container-fluid">
+                <div class="entetes">
+                    <h4>Parcours</h4>
+                    <p>Vos dernières expériences</p>
+                </div>
+                <span id=msgErreur></span>
+                <div class="col-md-12 colonnes">
+                    <div class="form-group">
+                        <label for="question1">Dernière classe suivie :</label><input type="text" class="form-control incorrect correct" name="question" id="question1">     
+                    </div>
+                    <br><br>
+                    <h6 id="ensembleCheck1">Dernier diplôme obtenu :</h6>   
+                      
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="aucun" name="question2check" id="question2check1">
+                        <label class="form-check-label" for="question2check1">Aucun</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question2check" id="question2check2">
+                        <label class="form-check-label" for="question2check2">Brevet des collèges</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question2check" id="question2check3">  
+                        <label class="form-check-label" for="question2check3">BEP / CAP</label>
+                    </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question2check" id="question2check4">  
+                        <label class="form-check-label" for="question2check4">BAC ou équivalent</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question2check" id="question2check5">  
+                        <label class="form-check-label" for="question2check5">BTS / DUT</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question2check" id="question2check5">
+                        <label class="form-check-label" for="question2check5">Autre :</label>
+                        <input type="text" id="question2">
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                        <label for="question3">Langue(s) parlée(s) :</label><input type="text" class="form-control incorrect correct" name="question" id="question3">  
+                    </div>
+                    <br><br>
+                    <h6>Statut :</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question4check" name="question" id="question4check1">
+                        <label class="form-check-label" for="question4check1">Scolarisé</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question4check" name="question" id="question4check2">
+                        <label class="form-check-label" for="question4check2">Demandeur d'emploi</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question4check" name="question" id="question4check3">
+                        <label class="form-check-label" for="question4check3">En emploi</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="question4check" name="question" id="question4check4">
+                        <label class="form-check-label" for="question4check4">Autre</label>
+                    </div>
+                    <br><br>
+                    <h6> Etes vous accompgné.e dans votre projet ? </h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question5check1">
+                        <label class="form-check-label" for="question5check1">Mission Locale</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question5check2">
+                        <label class="form-check-label" for="question5check2">Pôle Emploi</label>
+                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question5check3">  
+                        <label class="form-check-label" for="question5check3">PLIE</label>
+                    </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question5check4">  
+                        <label class="form-check-label" for="question5check4">Autre</label>
+                    </div>
+                    <br><br>
+                    <h6> Etes vous véhiculé.e ? </h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question6check1">  
+                        <label class="form-check-label" for="question6check1">Oui</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question6check2">  
+                        <label class="form-check-label" for="question6check2">Non</label>
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                        <label for="question7">Comment nous avez-vous connu ?</label><input type="text" class="form-control incorrect correct" id="question7">
+                        <br>
+                        <label for="question8">Formation envisagée :</label><input type="text" class="form-control incorrect correct" name="question" id="question8">
+                        <br>
+                        <label for="question9">Métier envisagé :</label><input type="text" class="form-control incorrect correct" name="question" id="question9">
+                        <br>
+                        <label for="question10">CFA souhaité :</label><input type="text" class="form-control incorrect correct" name="question" id="question10">
+                        <br>
+                        <label for="question11">Diplôme visé :</label><input type="text" class="form-control incorrect correct" name="question" id="question11">
+                        <br>
+                    </div>
+                    <br>
+                    <h6> Zone de recherche : </h6>                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question12check1">
+                        <label class="form-check-label" for="question12check1">Nice</label>
+                    </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question12check2">
+                        <label class="form-check-label" for="question12check2">Nice et ses alentours</label>
+                    </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question12check3">
+                        <label class="form-check-label" for="question12check3">Ouest du département</label>
+                    </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question12check4">
+                        <label class="form-check-label" for="question12check4">Est du département</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="question12check5">
+                        <label class="form-check-label" for="question12check5">Autre :</label>
+                        <input type="text" id="question12">
+                    </div>
+                </div>
+            </section>
+
+            <section class="container-fluid">
+                <div class="entetes">        
+                    <h4>Votre projet</h4>
+                    <p>Démarches réalisées pour entrer en apprentissage</p>
+                </div>
+                <div class="col-md-12 colonnes">
+                    <div class="form-group">
+                        <label for="question13">Recherche d'entreprises :</label><input type="text" class="form-control incorrect correct" id="question13">
+                        <br>
+                        <label for="question14">Inscription auprès des CFA ? Si oui lesquels :</label><input type="text" class="form-control incorrect correct" id="question14">
+                        <br>
+                        <label for="question15">Journées portes ouvertes ? Si oui lesquelles :</label><input type="text" class="form-control incorrect correct" id="question15">
+                        <br>
+                        <label for="question16">Salons ? Si oui lesquels :</label><input type="text" class="form-control incorrect correct" id="question16">
+                        <br>
+                        <label for="question17">Découvertes métiers ? Si oui lesquels :</label><input type="text" class="form-control incorrect correct" id="question17">
+                        <br>
+                        <label for="question18">Stages ? Si oui lesquels :</label><input type="text" class="form-control incorrect correct" id="question18">
+                        <br>
+                        <label for="question19">Autre ? Préciser :</label><input type="text" class="form-control incorrect correct" id="question19">
+                        <br>
+                    </div>
+                </div>    
+            </section>
+
+            <section class="container-fluid">
+                <div class="entetes">
+                    <h4>Informations personnelles</h4>
+                    <p>Courage c'est bientôt la fin</p>
+                </div>
+                <div class="col-md-12 colonnes">
+                    <div class="form-group">
+                        <label for="question20">Nom</label><input type="text" class="form-control incorrect correct" id="question20"><br>
+                        <label for="question21">Prénom</label><input type="text" class="form-control incorrect correct" id="question21"><br>
+                        <label for="question22">Date de naissance</label><input type="date" class="form-control incorrect correct" id="question22" placeholder=".. / .. / ...."><br>
+                        <label for="question23">Téléphone</label><input type="text" class="form-control incorrect correct" id="question23"><br>
+                        <label for="question24">Email</label><input type="email" class="form-control incorrect correct" id="question24" placeholder="votreadresse@mail.com"><br>
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid">
+                <div class="row justify-content-center">
+                    <button class="col-sm-2" type="reset" value="reset" class="form-control incorrect correct" id="annuler"> Annuler </button>
+                    <button class="col-sm-2" type="submit" value="submit" class="form-control incorrect correct" id="envoyer"> Envoyer </button>
+                </div>
+            </section>
+        </form>
+    </fieldset>
+    <div class="">
+        <div id="barre-1" class=""><div class="progression"></div><div class="pourcentage"></div></div>
+        <div id="barre-2" class=""><div class="progression"></div><div class="pourcentage"></div></div>
+        <div id="barre-3" class=""><div class="progression"><div class="pourcentage"></div></div></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
